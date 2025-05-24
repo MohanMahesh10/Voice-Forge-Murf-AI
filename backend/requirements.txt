@@ -10,3 +10,5 @@ passlib[bcrypt]==1.7.4
 numpy==1.24.3
 scipy==1.11.1
 pydub==0.25.1
+azure-storage-blob==12.18.3
+cloudinary==1.36.0
