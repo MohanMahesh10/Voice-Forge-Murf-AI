@@ -1,4 +1,4 @@
-# 🎙️ Voice Forge
+# 🎙️ Voice Forge by Murf AI 
 > Transform voices with the power of AI - A modern web application for voice transformation and audio processing.
 
 
@@ -205,4 +205,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-<p align="center"> ALL RIGHTS TO MOHAN MAHESH @2025 </p>
+<p align="center">  @2025 MOHAN MAHESH </p>
