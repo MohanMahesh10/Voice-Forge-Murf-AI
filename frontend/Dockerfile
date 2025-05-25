@@ -12,7 +12,8 @@ COPY . .
 # Create the build
 RUN npm run build
 
-EXPOSE 5173
+# Expose the port that SvelteKit runs on in production (3000)
+EXPOSE 3000
 
 # Use production-ready command
-CMD ["node", "build"] 
+CMD ["node", "build"]

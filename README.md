@@ -1,115 +1,200 @@
-# Voice Forge
+# 🎙️ Voice Forge
 
-A web-based voice transformation application that allows you to modify audio recordings with different voice effects.
+> Transform voices with the power of AI - A modern web application for voice transformation and audio processing.
 
-## Features
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00)](https://svelte.dev/)
+[![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/)
 
-- Record audio directly from your browser
-- Upload audio files for transformation
-- Transform voices with different voice profiles:
-  - Male to female voice conversion
-  - Female to male voice conversion
-  - Various accent transformations
-- Listen to transformed audio in real-time
-- Download transformed audio files
-- View history of voice transformations
+## 🌟 Features
 
-## Architecture
+Voice Forge is your go-to platform for voice transformation, offering:
 
-Voice Forge is built with a modern tech stack:
+- 🎤 **Real-time Voice Recording** - Record audio directly in your browser
+- 📁 **Audio File Upload** - Transform existing audio files
+- 🔄 **Voice Transformation Options**:
+  - Gender transformation (Male ↔️ Female)
+  - Accent modifications
+  - Tone and pitch adjustments
+- 🎵 **Real-time Preview** - Listen to transformations instantly
+- 📥 **Easy Export** - Download transformed audio in various formats
+- 📊 **Transformation History** - Track and manage your voice transformations
+- 🔒 **Secure Processing** - All data handling follows best security practices
 
-- **Backend**: FastAPI (Python)
-- **Frontend**: Svelte with TailwindCSS
-- **Containerization**: Docker & Docker Compose
-
-## Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- Docker and Docker Compose
+- Docker & Docker Compose
 - Git
+- A Murf API key (for voice transformation)
 
-### Running Locally
+### Local Development
 
-1. Clone this repository:
+1. **Clone the repository**
    ```bash
    git clone https://github.com/YOUR-USERNAME/Voice_Forge.git
    cd Voice_Forge
    ```
 
-2. Create a `.env` file in the root directory with your MURF API key:
-   ```
-   MURF_API_KEY=your_api_key_here
+2. **Set up environment variables**
+   ```bash
+   # Create .env file
+   echo "MURF_API_KEY=your_api_key_here" > .env
    ```
 
-3. Start the application with Docker Compose:
+3. **Launch the application**
    ```bash
    docker-compose up
    ```
 
-4. Access the application:
-   - Frontend: [http://localhost:5173](http://localhost:5173)
-   - Backend API: [http://localhost:8000](http://localhost:8000)
-   - API Documentation: [http://localhost:8000/docs](http://localhost:8000/docs)
+4. **Access the application**
+   - 🌐 Web Interface: [http://localhost:5173](http://localhost:5173)
+   - 🔧 API Endpoint: [http://localhost:8000](http://localhost:8000)
+   - 📚 API Docs: [http://localhost:8000/docs](http://localhost:8000/docs)
 
-## API Endpoints
+## 🏗️ Architecture
 
-- `GET /api/voices` - Get list of available voice profiles
-- `POST /api/transform` - Transform an audio file with a selected voice profile
-- `GET /api/history` - Get history of voice transformations
+Voice Forge is built with a modern, scalable architecture:
 
-## Project Structure
+### Backend (FastAPI)
+
+- **Core**: Python 3.9+ with FastAPI framework
+- **Audio Processing**: 
+  - pydub for audio manipulation
+  - NumPy for signal processing
+  - Custom pitch-shifting algorithms
+- **Storage**: Azure Blob Storage for audio files
+- **Security**: Azure Key Vault for secrets management
+
+### Frontend (Svelte)
+
+- **Framework**: SvelteKit for optimal performance
+- **Styling**: TailwindCSS for responsive design
+- **Audio Visualization**: WaveSurfer.js
+- **State Management**: Built-in Svelte stores
+- **Notifications**: Svelte French Toast
+
+### DevOps
+
+- **Containerization**: Docker & Docker Compose
+- **CI/CD**: GitHub Actions
+- **Cloud**: Azure Container Apps
+- **Monitoring**: Azure Application Insights
+
+## 📡 API Endpoints
+
+```typescript
+// Available endpoints
+GET  /api/voices     // List available voice profiles
+POST /api/transform  // Transform audio with selected profile
+GET  /api/history    // Get transformation history
+```
+
+## 📂 Project Structure
 
 ```
 Voice_Forge/
-├── backend/               # FastAPI Python backend
-│   ├── main.py           # Main application file
-│   ├── requirements.txt  # Python dependencies
-│   ├── Dockerfile        # Backend Docker configuration
-│   ├── uploads/          # Directory for uploaded audio files
-│   └── outputs/          # Directory for transformed audio files
-├── frontend/              # Svelte frontend
-│   ├── src/              # Source code
-│   │   ├── lib/          # Libraries and components
-│   │   └── routes/       # Application routes
-│   ├── Dockerfile        # Frontend Docker configuration
-│   └── package.json      # Node.js dependencies
-└── docker-compose.yml     # Docker Compose configuration
+├── 🔧 backend/               # FastAPI service
+│   ├── main.py              # Core application logic
+│   ├── requirements.txt     # Python dependencies
+│   └── Dockerfile          # Backend container config
+├── 🎨 frontend/             # Svelte application
+│   ├── src/                # Source code
+│   │   ├── lib/           # Shared components
+│   │   └── routes/        # Page components
+│   └── Dockerfile         # Frontend container config
+└── 🐳 docker-compose.yml    # Container orchestration
 ```
 
-## Deployment
+## 🚀 Deployment
 
-The application can be deployed to Azure using Container Apps:
+### Azure Deployment
 
-1. Push Docker images to Azure Container Registry
-2. Deploy backend and frontend as separate Container Apps
-3. Set up Azure Storage for file uploads and outputs
+Voice Forge is optimized for Azure deployment:
 
-## Technologies Used
+1. **Automated Deployment**
+   ```bash
+   # Using provided script
+   ./deploy.sh
+   ```
 
-- **Backend**:
-  - FastAPI
-  - pydub (audio processing)
-  - NumPy (signal processing)
-  - Python 3.9+
+2. **Manual Deployment**
+   - Follow [Azure Deployment Guide](AZURE_DEPLOYMENT_GUIDE.md)
+   - Uses Azure Container Apps for scalability
+   - Integrates with Azure Key Vault for secrets
 
-- **Frontend**:
-  - Svelte
-  - TailwindCSS
-  - TypeScript
-  - Vite
+### Custom Deployment
 
-- **DevOps**:
-  - Docker
-  - Docker Compose
-  - GitHub
+The application can be deployed to any platform supporting Docker:
 
-## License
+1. Build the containers:
+   ```bash
+   docker-compose build
+   ```
 
-[MIT](LICENSE)
+2. Configure environment variables
+3. Launch the application:
+   ```bash
+   docker-compose up -d
+   ```
 
-## Acknowledgements
+## 🛠️ Development
 
-- FastAPI for the efficient Python web framework
-- Svelte for the reactive frontend framework
-- TailwindCSS for the utility-first CSS framework
+### Setting Up Development Environment
+
+1. **Backend Development**
+   ```bash
+   cd backend
+   python -m venv venv
+   source venv/bin/activate  # or `venv\Scripts\activate` on Windows
+   pip install -r requirements.txt
+   uvicorn main:app --reload
+   ```
+
+2. **Frontend Development**
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+
+### Running Tests
+
+```bash
+# Backend tests
+cd backend
+pytest
+
+# Frontend tests
+cd frontend
+npm run test
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgements
+
+- [FastAPI](https://fastapi.tiangolo.com/) - For the powerful Python web framework
+- [Svelte](https://svelte.dev/) - For the reactive frontend framework
+- [TailwindCSS](https://tailwindcss.com/) - For the utility-first CSS framework
+- [WaveSurfer.js](https://wavesurfer-js.org/) - For audio visualization
+- [Murf API](https://murf.ai/) - For voice transformation capabilities
+
+---
+
+<p align="center">Made with ❤️ by the Voice Forge Team</p>

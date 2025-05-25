@@ -14,6 +14,14 @@ from pathlib import Path
 from dotenv import load_dotenv
 from loguru import logger
 
+# Import Azure Key Vault integration
+try:
+    from azure_keyvault import get_secret
+except ImportError:
+    # Fallback if Azure Key Vault is not available
+    def get_secret(name, default=None):
+        return os.environ.get(name, default)
+
 # Load environment variables
 load_dotenv()
 
