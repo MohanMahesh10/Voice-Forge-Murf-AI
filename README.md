@@ -60,8 +60,9 @@ Voice Forge is your go-to platform for voice transformation, offering:
    - 📚 API Docs: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ## 🏗️ Architecture
+![diagram-export-5-25-2025-10_02_50-PM](https://github.com/user-attachments/assets/bddfa873-1a4c-4c0e-b558-d496fb1e91b9)
 
-![diagram-export-5-25-2025-9_59_39-PM](https://github.com/user-attachments/assets/e4f4f198-b037-4c19-832e-231078f43e38)
+
 
 
 Voice Forge is built with a modern, scalable architecture:
