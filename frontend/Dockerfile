@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
-RUN npm install && npm install --save-dev @sveltejs/adapter-vercel
+RUN npm install && npm install --save-dev @sveltejs/adapter-node
 
 # Copy all source files
 COPY . .
