@@ -1,6 +1,8 @@
 # 🎙️ Voice Forge
+![Screenshot 2025-05-25 010701](https://github.com/user-attachments/assets/901f9ac4-d2db-4862-9b9b-df1e4b9dc159)
 
 > Transform voices with the power of AI - A modern web application for voice transformation and audio processing.
+
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00)](https://svelte.dev/)
