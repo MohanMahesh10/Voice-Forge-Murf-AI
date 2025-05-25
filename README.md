@@ -35,7 +35,7 @@ Voice Forge is your go-to platform for voice transformation, offering:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/Voice_Forge.git
+   git clone https://github.com/MohanMahesh10/Voice-Forge-Murf-AI.git
    cd Voice_Forge
    ```
 
