@@ -197,4 +197,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-<p align="center">Made with ❤️ by the Voice Forge Team</p>
+<p align="center"> ALL RIGHTS TO MOHAN MAHESH @2025 </p>
